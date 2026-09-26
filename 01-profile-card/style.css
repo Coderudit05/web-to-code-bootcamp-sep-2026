@@ -31,7 +31,15 @@ body {
 
 .top {
     height: 40%;
-    background-color: brown;
+    /* background-color: brown; */
+
+    position: relative;
+
+    background: url('assets/cover-img.avif');
+    background-position: center;
+    background-repeat: no-repeat;
+
+
 }
 
 #imgContainer {
@@ -39,6 +47,12 @@ body {
     width: 100px;
     border-radius: 50%;
     overflow: hidden;
+
+    position: absolute;
+    bottom: -20px;
+    right: 35%;
+
+    border: 5px solid white;
 }
 
 #imgContainer img {
