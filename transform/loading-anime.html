@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading Spinner - Level 1</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        font-family: "Arial", sans-serif;
+      }
+
+      .container {
+        text-align: center;
+        background: white;
+        padding: 50px;
+        border-radius: 20px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+      }
+
+      h1 {
+        margin-bottom: 10px;
+        color: #333;
+        font-size: 28px;
+      }
+
+      .subtitle {
+        color: #888;
+        margin-bottom: 40px;
+        font-size: 14px;
+      }
+
+      .spinner {
+        height: 80px;
+        width: 80px;
+        /* background-color: brown; */
+        border: 10px solid gray;
+        border-top: 10px solid blue;
+        border-radius: 50%;
+
+        margin: 0px auto;
+
+        margin-bottom: 40px;
+
+        animation-name: spinner-anime;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+
+      }
+
+      @keyframes spinner-anime {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Loading Spinner</h1>
+      <p class="subtitle">Level 1 - Foundation Project</p>
+
+      <div class="spinner"></div>
+
+      <p class="loading-text">Loading...</p>
+    </div>
+  </body>
+</html>
