@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">Hello</button>
+
+    <input id="name" type="text" placeholder="Enter Your name" />
+
+    <script>
+      // let , const , var
+      const myBtn = document.getElementById("btn");
+
+      const name = document.getElementById("name");
+
+      console.log(myBtn);
+
+      //   myBtn.textContent = "Hellloooooooo";
+      //   myBtn.textContent = "heheheheh";
+      //   myBtn.textContent = "hoohohohoh";
+
+      //   console.log("hello");
+      //   document.write("");
+
+      myBtn.addEventListener("click", () => {
+        // console.log("click")
+        myBtn.textContent = "Button clicked";
+      });
+
+      name.addEventListener("keypress", (e) => {
+        console.log(e.key);
+
+        if (e.key === "Enter") {
+          alert("your form has been submitted");
+        }
+      });
+    </script>
+  </body>
+</html>
