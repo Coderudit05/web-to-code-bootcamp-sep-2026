@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
+      body {
+        background: linear-gradient(
+          to right,
+          rgb(249, 168, 212),
+          rgb(216, 180, 254),
+          rgb(129, 140, 248)
+        );
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .card {
+        height: 200px;
+        width: 300px;
+        background-color: white;
+        /* border: 1px solid black; */
+        border-radius: 10px;
+
+        box-shadow: 0px 0px 10px black;
+
+        cursor: pointer;
+
+        transition-property: all;
+        transition-duration: 0.5s;
+      }
+
+      .card:hover {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card"></div>
+  </body>
+</html>

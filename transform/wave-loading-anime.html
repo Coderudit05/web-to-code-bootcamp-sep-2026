@@ -41,17 +41,70 @@
 
         cursor: pointer;
 
-        transition-property: all;
-        transition-duration: 0.5s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
       }
 
-      .card:hover{
-        transform: scale(1.1);
+      .child {
+        height: 40px;
+        width: 40px;
+
+        border-radius: 50%;
+
+        animation-name: wave-anime;
+        animation-duration: 1.2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        /* animation-delay: 5s; 
+        we will not apply the animation delay here 
+        because we want to apply this delay on each child element */
+      }
+
+      .child:nth-child(1) {
+        background-color: purple;
+        animation-delay: 0.1s;
+      }
+      .child:nth-child(2) {
+        background-color: brown;
+        animation-delay: 0.2s;
+      }
+      .child:nth-child(3) {
+        background-color: pink;
+        animation-delay: 0.3s;
+      }
+      .child:nth-child(4) {
+        background-color: aquamarine;
+        animation-delay: 0.4s;
+      }
+      .child:nth-child(5) {
+        background-color: yellowgreen;
+        animation-delay: 0.5s;
+      }
+
+      @keyframes wave-anime {
+        0% {
+          transform: translateY(0px);
+        }
+
+        50% {
+          transform: translateY(-50px);
+        }
+
+        100% {
+          transform: translateY(0px);
+        }
       }
     </style>
   </head>
   <body>
-    <div class="card"></div>
-    
+    <div class="card">
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+    </div>
   </body>
 </html>
